@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+    <ul>
+        <li><a href="('home')">Home</a></li>
+        <li><a href="{{url_for('about')}}">About</a></li>
+        <li><a href="{{url_for('services')}}">Services</a></li>
+        <li><a href="{{url_for('contact')}}">Contact</a></li>
+
+        <h1>Calculator</h1>
+    
+        <form action="{{url_for('form')}}" method= "post">
+
+            <input type="float" name="First_Num" placeholder="Enter 1st Number" required="required">
+            <br><br><br>
+            <input type="float" name="Second_Num" placeholder="Enter 2nd Number" required="required">
+            <br><br><br>
+
+            <button type="submit" class="btn btn-primary">Calculate</button>
+    
+        </form>
+
+            <br><br>
+            Addition of two numbers is {{result}}
+            <br>
+            Substraction of two numbers is {{result1}}
+            <br>
+            Multiplication of two numbers is {{result2}}
+            <br>
+            Division of two numbers is {{result3}}
+    </ul>
+
+{% endblock  %}
